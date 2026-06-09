@@ -18,7 +18,13 @@
       <a href="index.html" aria-label="Volver a Epifania">
         <img src="assets/epifania-logo.svg" alt="Epifania" width="270" height="70">
       </a>
-      <button class="print-button" type="button" data-print>Guardar como PDF</button>
+      <div class="guide-actions">
+        <div class="guide-language" role="group" aria-label="Cambiar idioma">
+          <button class="active" type="button" data-lang="es" aria-pressed="true">ES</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button class="print-button" type="button" data-print>Guardar como PDF</button>
+      </div>
     </header>
 
     <main>
@@ -57,7 +63,7 @@
         </div>
       </section>
 
-      <section class="guide-section">
+      <section class="guide-section prompts-section">
         <div class="section-heading">
           <p class="eyebrow">Tu sistema semanal</p>
           <h2>Usa los prompts en este orden</h2>

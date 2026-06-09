@@ -52,6 +52,37 @@ footer {
   border-radius: 8px;
 }
 
+.guide-actions,
+.guide-language {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.guide-language {
+  padding: 4px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.guide-language button {
+  min-width: 38px;
+  min-height: 34px;
+  color: var(--muted);
+  background: transparent;
+  border: 0;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.guide-language button.active {
+  color: var(--white);
+  background: var(--ink);
+}
+
 .print-button,
 .prompt-heading button {
   min-height: 42px;
@@ -410,6 +441,15 @@ footer p {
     font-size: 12px;
   }
 
+  .guide-actions {
+    gap: 5px;
+  }
+
+  .guide-language button {
+    min-width: 32px;
+    padding: 0 7px;
+  }
+
   .cover,
   .intro,
   .final-cta,
@@ -456,6 +496,7 @@ footer p {
   }
 
   .print-button,
+  .guide-language,
   .prompt-heading button {
     display: none;
   }

@@ -228,6 +228,7 @@ function setText(selector, key) {
 
 function applyLanguage(language) {
   currentLanguage = translations[language] ? language : "es";
+  localStorage.setItem("epifaniaLanguage", currentLanguage);
   document.documentElement.lang = currentLanguage;
   document.title = currentLanguage === "es"
     ? "epifania | 30 dias de contenido con IA para pymes"
@@ -322,7 +323,7 @@ leadForm.addEventListener("submit", (event) => {
   }
 });
 
-applyLanguage(currentLanguage);
+applyLanguage(localStorage.getItem("epifaniaLanguage") || currentLanguage);
 applyCurrency(currentCurrency);
 
 if (new URLSearchParams(window.location.search).get("muestra") === "requerida") {
