@@ -1,0 +1,18 @@
+<svg width="540" height="140" viewBox="0 0 540 140" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">epifania logo</title>
+  <desc id="desc">Logotipo de epifania con simbolo de tres bucles blancos y centro turquesa.</desc>
+  <rect x="0" y="0" width="540" height="140" rx="8" fill="#080D18"/>
+  <rect x="22" y="18" width="104" height="104" rx="26" fill="#0D1424"/>
+  <g transform="translate(74 70) scale(.64) translate(-80 -80)">
+    <g stroke="#F9FAFB" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M80 76C72 72 65 65 65 56C65 46 73 39 83 39C94 39 102 47 102 57C102 66 95 73 87 73C80 73 75 68 75 62C75 57 79 53 84 53C88 53 91 56 91 60"/>
+      <path d="M80 76C72 72 65 65 65 56C65 46 73 39 83 39C94 39 102 47 102 57C102 66 95 73 87 73C80 73 75 68 75 62C75 57 79 53 84 53C88 53 91 56 91 60" transform="rotate(120 80 80)"/>
+      <path d="M80 76C72 72 65 65 65 56C65 46 73 39 83 39C94 39 102 47 102 57C102 66 95 73 87 73C80 73 75 68 75 62C75 57 79 53 84 53C88 53 91 56 91 60" transform="rotate(240 80 80)"/>
+    </g>
+    <circle cx="80" cy="80" r="10" fill="#0D1424" stroke="#F9FAFB" stroke-width="6"/>
+    <circle cx="80" cy="80" r="4" fill="#17BEBB"/>
+  </g>
+  <text x="156" y="82" fill="#F9FAFB" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="900">epifan</text>
+  <text x="369" y="82" fill="#17BEBB" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="900">IA</text>
+  <text x="159" y="112" fill="#CBD5E1" font-family="Manrope, Arial, sans-serif" font-size="18" font-weight="800">sistema de contenido con inteligencia aplicada</text>
+</svg>
