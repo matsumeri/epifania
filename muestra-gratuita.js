@@ -60,7 +60,7 @@ const groups = [
     "The text sounds like your brand after you edit it."
   ] },
   { selector: ".final-cta > div:first-child > *", en: ["The next step", "Turn a good week into a monthly system", "The Epifania Founders Edition includes more than 60 explained prompts, a guided diagnosis, editable templates, examples, a 30-day calendar, and a group implementation session."] },
-  { selector: ".cta-box > *", en: ["Founder price", "$29.990 CLP", "Future price $49.990", "Reserve my founder spot"] },
+  { selector: ".cta-box > *", en: ["Founder price", "US$29", "Future price US$49", "Reserve my founder spot"] },
   { selector: "footer p", en: ["Epifania turns clarity into content that helps you sell."] }
 ];
 

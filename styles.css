@@ -757,9 +757,17 @@ code {
 }
 
 .custom-note a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  margin-top: 8px;
+  padding: 0 16px;
   color: var(--ink);
+  background: #25d366;
+  border-radius: 8px;
   font-weight: 900;
-  text-decoration: underline;
+  text-decoration: none;
+  box-shadow: 0 14px 32px rgba(37, 211, 102, 0.2);
 }
 
 .contact-section {

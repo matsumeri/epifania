@@ -296,7 +296,11 @@ setInterval(() => {
 }, 2600);
 
 languageButtons.forEach((button) => {
-  button.addEventListener("click", () => applyLanguage(button.dataset.lang));
+  button.addEventListener("click", () => {
+    const language = button.dataset.lang;
+    applyLanguage(language);
+    applyCurrency(language === "en" ? "usd" : "clp");
+  });
 });
 
 currencyButtons.forEach((button) => {
@@ -324,7 +328,7 @@ leadForm.addEventListener("submit", (event) => {
 });
 
 applyLanguage(localStorage.getItem("epifaniaLanguage") || currentLanguage);
-applyCurrency(currentCurrency);
+applyCurrency(currentLanguage === "en" ? "usd" : "clp");
 
 if (new URLSearchParams(window.location.search).get("muestra") === "requerida") {
   interestSelect.value = "sample";
