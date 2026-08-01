@@ -59,8 +59,9 @@ const groups = [
     "All data, results, and stories are true.",
     "The text sounds like your brand after you edit it."
   ] },
-  { selector: ".final-cta > div:first-child > *", en: ["The next step", "Turn a good week into a monthly system", "The Epifania Founders Edition includes more than 60 explained prompts, a guided diagnosis, editable templates, examples, a 30-day calendar, and a group implementation session."] },
-  { selector: ".cta-box > *", en: ["Founder price", "US$29", "Future price US$49", "Reserve my founder spot"] },
+  { selector: ".final-cta > div:first-child > .eyebrow, .final-cta > div:first-child > h2, .final-cta > div:first-child > p", en: ["The next step", "Turn a good week into a monthly system", "Buy the Founders Edition and get access to the complete material: more than 60 explained prompts, a guided diagnosis, editable templates, examples, a 30-day calendar, and a group implementation session."] },
+  { selector: ".cta-benefits li", en: ["Secure bank transfer payment with Fintoc.", "Download enabled only after payment is confirmed.", "Access sent by email with usage instructions."] },
+  { selector: ".cta-box > span, .cta-box > strong, .cta-box > s, .cta-box > a, .cta-box > p", en: ["Founder price", "US$29", "Future price US$49", "Pay with Fintoc and access the material", "Delivery by email after approved payment."] },
   { selector: "footer p", en: ["Epifania turns clarity into content that helps you sell."] }
 ];
 

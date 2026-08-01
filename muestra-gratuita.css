@@ -175,6 +175,30 @@ p {
   color: rgba(255, 255, 255, 0.76);
 }
 
+.cta-benefits {
+  display: grid;
+  gap: 10px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cta-benefits li {
+  position: relative;
+  padding-left: 28px;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.55;
+}
+
+.cta-benefits li::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--gold);
+  content: "+";
+  font-weight: 900;
+}
+
 .lead {
   max-width: 720px;
   font-size: 18px;
@@ -408,6 +432,14 @@ code {
   font-weight: 900;
   text-align: center;
   text-decoration: none;
+}
+
+.cta-box p {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: center;
 }
 
 footer {
