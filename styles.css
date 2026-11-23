@@ -163,6 +163,17 @@ a {
   box-shadow: 0 12px 28px rgba(37, 211, 102, 0.24);
 }
 
+.agent-button {
+  gap: 10px;
+  color: var(--white);
+  background: linear-gradient(135deg, #111827, #194c54);
+  box-shadow: 0 12px 28px rgba(17, 24, 39, 0.18);
+}
+
+.agent-button iconify-icon {
+  color: var(--teal);
+}
+
 .whatsapp-button iconify-icon {
   width: 18px;
   height: 18px;

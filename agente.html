@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Agente Epifania | Estrategia y contenido</title>
+    <meta name="description" content="Cliente conversacional de Epifania para crear estrategia y contenido con el modelo de IA que prefieras.">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" defer></script>
+    <link rel="stylesheet" href="agente.css">
+    <script src="agente.js" defer></script>
+  </head>
+  <body>
+    <div class="agent-app">
+      <aside class="sidebar" aria-label="Historial de conversaciones">
+        <div class="sidebar-top">
+          <a class="brand" href="index.html" aria-label="Volver a Epifania">
+            <img src="assets/epifania-mark.svg" alt="" width="38" height="38">
+            <span>epifan<span>IA</span></span>
+          </a>
+          <button class="icon-button sidebar-close" type="button" data-sidebar-close aria-label="Cerrar historial">
+            <iconify-icon icon="lucide:x" aria-hidden="true"></iconify-icon>
+          </button>
+        </div>
+
+        <button class="new-chat-button" type="button" data-new-chat>
+          <iconify-icon icon="lucide:plus" aria-hidden="true"></iconify-icon>
+          <span>Nuevo chat</span>
+        </button>
+
+        <div class="history-heading">
+          <span>Conversaciones</span>
+          <button type="button" data-clear-history aria-label="Eliminar historial">
+            <iconify-icon icon="lucide:trash-2" aria-hidden="true"></iconify-icon>
+          </button>
+        </div>
+        <nav class="chat-history" data-chat-history></nav>
+
+        <div class="sidebar-footer">
+          <div class="connection-state" data-connection-state>
+            <span class="status-dot"></span>
+            <div><strong>Modo demostración</strong><small>Las respuestas se generan localmente</small></div>
+          </div>
+          <button class="settings-button" type="button" data-open-settings>
+            <iconify-icon icon="lucide:settings-2" aria-hidden="true"></iconify-icon>
+            <span>Configurar conexión</span>
+          </button>
+        </div>
+      </aside>
+
+      <div class="sidebar-backdrop" data-sidebar-backdrop></div>
+
+      <main class="chat-panel">
+        <header class="chat-header">
+          <div class="chat-title-wrap">
+            <button class="icon-button sidebar-open" type="button" data-sidebar-open aria-label="Abrir historial">
+              <iconify-icon icon="lucide:panel-left" aria-hidden="true"></iconify-icon>
+            </button>
+            <div>
+              <span class="agent-label"><span class="status-dot"></span> Agente de contenido</span>
+              <h1 data-chat-title>Nueva estrategia</h1>
+            </div>
+          </div>
+          <div class="header-actions">
+            <button class="icon-button" type="button" data-export-chat aria-label="Exportar conversación">
+              <iconify-icon icon="lucide:download" aria-hidden="true"></iconify-icon>
+            </button>
+            <button class="model-trigger" type="button" data-model-trigger aria-haspopup="dialog" aria-expanded="false">
+              <span class="model-logo" data-model-logo>E</span>
+              <span data-current-model>Epifania Auto</span>
+              <iconify-icon icon="lucide:chevrons-up-down" aria-hidden="true"></iconify-icon>
+            </button>
+          </div>
+        </header>
+
+        <section class="conversation" data-conversation aria-live="polite" aria-label="Conversación">
+          <div class="welcome" data-welcome>
+            <span class="welcome-mark">
+              <img src="assets/epifania-mark.svg" alt="" width="60" height="60">
+            </span>
+            <p class="eyebrow">Tu copiloto de contenido</p>
+            <h2>Convierte lo que sabes en una conversación que vende.</h2>
+            <p>Cuéntame qué ofreces, a quién ayudas y qué quieres lograr. El agente organizará la estrategia, preguntará lo importante y respetará tus hechos.</p>
+            <div class="prompt-grid">
+              <button type="button" data-suggestion="Quiero crear un calendario de contenido para 7 días. Hazme las preguntas clave sobre mi negocio.">
+                <iconify-icon icon="lucide:calendar-days" aria-hidden="true"></iconify-icon>
+                <span><strong>Plan semanal</strong>Crea un calendario de 7 días</span>
+                <iconify-icon icon="lucide:arrow-up-right" aria-hidden="true"></iconify-icon>
+              </button>
+              <button type="button" data-suggestion="Ayúdame a definir el posicionamiento y la oferta principal de mi negocio.">
+                <iconify-icon icon="lucide:target" aria-hidden="true"></iconify-icon>
+                <span><strong>Oferta y público</strong>Define tu posicionamiento</span>
+                <iconify-icon icon="lucide:arrow-up-right" aria-hidden="true"></iconify-icon>
+              </button>
+              <button type="button" data-suggestion="Analiza esta objeción y conviértela en una publicación clara, honesta y sin presión:">
+                <iconify-icon icon="lucide:message-circle-question" aria-hidden="true"></iconify-icon>
+                <span><strong>Resolver objeciones</strong>Responde sin sonar a venta dura</span>
+                <iconify-icon icon="lucide:arrow-up-right" aria-hidden="true"></iconify-icon>
+              </button>
+              <button type="button" data-suggestion="Necesito convertir una historia real de mi negocio en un guion para video de 45 segundos.">
+                <iconify-icon icon="lucide:clapperboard" aria-hidden="true"></iconify-icon>
+                <span><strong>Guion de video</strong>Parte de una historia real</span>
+                <iconify-icon icon="lucide:arrow-up-right" aria-hidden="true"></iconify-icon>
+              </button>
+            </div>
+          </div>
+          <div class="message-list" data-message-list></div>
+        </section>
+
+        <div class="composer-area">
+          <div class="attachment-chip" data-attachment-chip hidden>
+            <iconify-icon icon="lucide:file-text" aria-hidden="true"></iconify-icon>
+            <span data-attachment-name></span>
+            <button type="button" data-remove-attachment aria-label="Quitar archivo">
+              <iconify-icon icon="lucide:x" aria-hidden="true"></iconify-icon>
+            </button>
+          </div>
+          <form class="composer" data-chat-form>
+            <label class="sr-only" for="agent-prompt">Mensaje para el Agente Epifania</label>
+            <textarea id="agent-prompt" data-prompt rows="1" maxlength="12000" placeholder="Pregunta, crea o mejora contenido..." required></textarea>
+            <div class="composer-actions">
+              <div>
+                <input class="sr-only" id="agent-attachment" type="file" data-attachment accept=".txt,.md,.csv,.json">
+                <label class="composer-tool" for="agent-attachment" title="Adjuntar archivo de texto">
+                  <iconify-icon icon="lucide:paperclip" aria-hidden="true"></iconify-icon>
+                  <span class="sr-only">Adjuntar archivo</span>
+                </label>
+                <button class="composer-model" type="button" data-model-trigger>
+                  <span data-current-model>Epifania Auto</span>
+                  <iconify-icon icon="lucide:chevron-down" aria-hidden="true"></iconify-icon>
+                </button>
+              </div>
+              <button class="send-button" type="submit" data-send aria-label="Enviar mensaje">
+                <iconify-icon icon="lucide:arrow-up" aria-hidden="true"></iconify-icon>
+              </button>
+            </div>
+          </form>
+          <p class="composer-note">El agente puede equivocarse. Revisa cifras, promesas y resultados antes de publicar.</p>
+        </div>
+      </main>
+    </div>
+
+    <dialog class="model-dialog" data-model-dialog aria-labelledby="model-dialog-title">
+      <div class="dialog-heading">
+        <div>
+          <span class="eyebrow">Elige tu inteligencia</span>
+          <h2 id="model-dialog-title">Seleccionar modelo</h2>
+        </div>
+        <button class="icon-button" type="button" data-close-model aria-label="Cerrar selector">
+          <iconify-icon icon="lucide:x" aria-hidden="true"></iconify-icon>
+        </button>
+      </div>
+      <div class="model-list" data-model-list></div>
+      <p class="dialog-note">Los modelos disponibles dependen del endpoint conectado. En modo demostración puedes comparar la experiencia sin consumir créditos.</p>
+    </dialog>
+
+    <dialog class="settings-dialog" data-settings-dialog aria-labelledby="settings-dialog-title">
+      <form method="dialog" data-settings-form>
+        <div class="dialog-heading">
+          <div>
+            <span class="eyebrow">Conexión segura</span>
+            <h2 id="settings-dialog-title">Configurar el agente</h2>
+          </div>
+          <button class="icon-button" type="button" data-close-settings aria-label="Cerrar configuración">
+            <iconify-icon icon="lucide:x" aria-hidden="true"></iconify-icon>
+          </button>
+        </div>
+        <label class="setting-field">
+          <span>Modo de uso</span>
+          <select data-connection-mode>
+            <option value="demo">Demostración local</option>
+            <option value="live">Conectar endpoint</option>
+          </select>
+        </label>
+        <label class="setting-field" data-endpoint-field>
+          <span>URL del endpoint</span>
+          <input type="text" inputmode="url" data-endpoint-url value="/api/chat" placeholder="https://tuservidor.com/api/chat" spellcheck="false">
+          <small>No ingreses API keys aquí. El servidor debe custodiar las credenciales.</small>
+        </label>
+        <div class="security-note">
+          <iconify-icon icon="lucide:shield-check" aria-hidden="true"></iconify-icon>
+          <p><strong>Sin secretos en el navegador.</strong> El cliente enviará el modelo, el historial y el contexto al endpoint indicado; las claves deben permanecer en el backend.</p>
+        </div>
+        <div class="dialog-actions">
+          <button class="button secondary" type="button" data-close-settings>Cancelar</button>
+          <button class="button primary" value="default" data-save-settings>Guardar configuración</button>
+        </div>
+      </form>
+    </dialog>
+
+    <div class="toast" data-toast role="status" aria-live="polite"></div>
+  </body>
+</html>
