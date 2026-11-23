@@ -408,7 +408,8 @@ code {
 
 .cta-box span,
 .cta-box strong,
-.cta-box s {
+.cta-box s,
+.cta-box .cta-capacity {
   display: block;
 }
 
@@ -420,6 +421,12 @@ code {
 
 .cta-box s {
   color: var(--muted);
+}
+
+.cta-box .cta-capacity {
+  color: var(--muted);
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .cta-box a {

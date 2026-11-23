@@ -59,9 +59,9 @@ const groups = [
     "All data, results, and stories are true.",
     "The text sounds like your brand after you edit it."
   ] },
-  { selector: ".final-cta > div:first-child > .eyebrow, .final-cta > div:first-child > h2, .final-cta > div:first-child > p", en: ["The next step", "Turn a good week into a monthly system", "Buy the Founders Edition and get access to the complete material: more than 60 explained prompts, a guided diagnosis, editable templates, examples, a 30-day calendar, and a group implementation session."] },
-  { selector: ".cta-benefits li", en: ["Secure bank transfer payment with Fintoc.", "Download enabled only after payment is confirmed.", "Access sent by email with usage instructions."] },
-  { selector: ".cta-box > span, .cta-box > strong, .cta-box > s, .cta-box > a, .cta-box > p", en: ["Founder price", "US$29", "Future price US$49", "Pay with Fintoc and access the material", "Delivery by email after approved payment."] },
+  { selector: ".final-cta > div:first-child > .eyebrow, .final-cta > div:first-child > h2, .final-cta > div:first-child > p", en: ["The next step", "Turn a good week into a monthly system", "Apply to the pilot program and build your monthly system with guidance: diagnosis, complete library, 30-day calendar, implementation session, and review."] },
+  { selector: ".cta-benefits li", en: ["We first confirm whether the program fits your business.", "We are working with only five participants at this stage.", "Submitting your application does not generate any charge."] },
+  { selector: ".cta-box > span, .cta-box > strong, .cta-box > .cta-capacity, .cta-box > a, .cta-box > p", en: ["Pilot program", "CLP $49,990", "5 spots in total", "Apply and continue on WhatsApp", "One-time payment, coordinated only after answering your questions."] },
   { selector: "footer p", en: ["Epifania turns clarity into content that helps you sell."] }
 ];
 
@@ -164,10 +164,10 @@ function applyLanguage(language) {
   document.documentElement.lang = currentLanguage;
   document.title = currentLanguage === "en"
     ? "Epifania | 5 prompts to create 7 days of content"
-    : "Epifania | 5 prompts para crear 7 dias de contenido";
+    : "Epifania | 5 prompts para crear 7 días de contenido";
   metaDescription.content = currentLanguage === "en"
     ? "A free Epifania mini guide to create seven days of strategic content with artificial intelligence."
-    : "Mini guia gratuita de Epifania para crear siete dias de contenido estrategico con inteligencia artificial.";
+    : "Mini guía gratuita de Epifania para crear siete días de contenido estratégico con inteligencia artificial.";
   logoLink.setAttribute("aria-label", currentLanguage === "en" ? "Back to Epifania" : "Volver a Epifania");
   languageControl.setAttribute("aria-label", currentLanguage === "en" ? "Change language" : "Cambiar idioma");
 
